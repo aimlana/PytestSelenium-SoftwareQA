@@ -30,8 +30,7 @@ def test_check_mikroskop(browser):
         lab_name.append(name)
 
     for i in range(len(lab_name)):
-        scroll_to_text = lab_name[i]
-        elem = browser.find_element(By.PARTIAL_LINK_TEXT, scroll_to_text)
+        elem = browser.find_element(By.PARTIAL_LINK_TEXT, lab_name[i])
         browser.execute_script("arguments[0].scrollIntoView();", elem)
         time.sleep(2)
 

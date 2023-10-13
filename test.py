@@ -25,8 +25,7 @@ try:
         lab_name.append(name)
 
     for i in range(len(lab_name)):
-        scroll_to_text = lab_name[i]
-        elem = driver.find_element(By.PARTIAL_LINK_TEXT, scroll_to_text)
+        elem = driver.find_element(By.PARTIAL_LINK_TEXT, lab_name[i])
         driver.execute_script("arguments[0].scrollIntoView();", elem)
         time.sleep(2)
 
